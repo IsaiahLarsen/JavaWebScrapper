@@ -10,8 +10,8 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         ArrayList<SubiPart> subiList = new ArrayList();
-        SubiPart s = new SubiPart();
 
+        //TODO get pages to search and part category from user
         int numPagesToSearch = 1;
         String partCategory = "exhaust";
 

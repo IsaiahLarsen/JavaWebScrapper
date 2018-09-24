@@ -16,7 +16,7 @@ public class PartNameFilter implements Filters {
      * @params none
      */
     public void writeToFile(){
-        boolean isMatches = false;
+        boolean hasMatches = false;
 
         //catch exceptions
         try {
@@ -35,17 +35,17 @@ public class PartNameFilter implements Filters {
                     writer.newLine();
                     writer.write("Found on page: " + s.getPageNumber() + "\n");
                     writer.newLine();
-                    isMatches = true;
+                    hasMatches = true;
                 }
             }
             //No matches
-            if(!isMatches){
+            if(!hasMatches){
                 writer.write("No Matches...");
             }
             writer.close();
 
             //reset isMatches boolean
-            isMatches = false;
+            hasMatches = false;
 
         }catch (Exception e){System.out.println(e.getMessage());}
     }
